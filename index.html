@@ -2,34 +2,18 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>Adventure Advisors</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-        /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    .input-group {
-        width: 50%;
-        margin: auto;
-        display: block;
-    }
-    #btn {
-        border-radius: 5px;
-        margin-top: 5px;
-    }
-    
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-  </style>
+    <!-- CSS style -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
 </head>
 
 <body>
@@ -42,14 +26,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Logo</a>
+                <img src="assets/images/aaLogo.png" alt="AA Logo">
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
@@ -60,7 +39,7 @@
 
 
     <div class="jumbotron text-center">
-        <h1>Adventure Advisors</h1>
+        <h1 class="titleFont">Adventure Advisors</h1>
         <p>Let us help you get to where you want to go</p>
         <form>
             <div class="input-group">
@@ -74,11 +53,11 @@
     <div class="container text-center">
         <h2>Trip Details</h2><br>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6" id="weatherDiv">
                 <h3> Weather </h3>
                 <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" id="trafficDiv">
                 <h3> Traffic </h3>
                 <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
             </div>
@@ -86,7 +65,7 @@
     </div><br>
     <div class="container text-center content-center">
         <div class="row">
-            <div class="col content-center">
+            <div class="col content-center" id="tripAdvisorDiv">
                 <h3> Trip Advisor </h3>
                 <img src="https://placehold.it/150x80?text=IMAGE" class="img" style="width:50%" alt="Image">
             </div>
@@ -94,7 +73,7 @@
         <br>
 
         <footer class="container-fluid text-center">
-            <p>Footer Text</p>
+            <p> Autumn | Rayna | <strong>&copy; 2019 Group 2</strong> | Robert | Thomas</p>
         </footer>
 
 </body>
