@@ -5,27 +5,32 @@
        border-radius: 0;
    }
 
+   /* On Title Hover */
    .titleFont:hover {
        color: #af0606;
    }
 
+   /* Jumbotron style */
    .jumbotron {
        background-color: #24585f;
        color: #fff;
    }
 
+   /* Search Input Group */
    .input-group {
        width: 50%;
        margin: auto;
        display: block;
    }
 
+   /* Button style */
    #btn {
        border-radius: 5px;
        margin-top: 5px;
        background-color: #af0606;
    }
 
+   /* Glyphicon padding */
    .glyphicon {
        padding-top: 20px;
    }
