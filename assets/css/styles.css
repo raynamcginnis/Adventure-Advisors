@@ -1,3 +1,10 @@
+   #logoImg {
+       max-width: 100%;
+       justify-content: center;
+       width: 100% !important;
+       height: auto !important;
+   }
+
    /* Remove the navbar's default margin-bottom and rounded borders */
    .navbar {
        background-color: black;
@@ -24,10 +31,15 @@
    }
 
    /* Button style */
-   #btn {
+   #searchBtn {
        border-radius: 5px;
        margin-top: 5px;
        background-color: #af0606;
+   }
+
+   #weatherInfo {
+       justify-content: center;
+       margin: auto;
    }
 
    /* Glyphicon padding */

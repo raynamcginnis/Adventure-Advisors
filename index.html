@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- Logo image -->
-                <img src="assets/images/aaLogo.png" alt="AA Logo">
+                <img src="assets/images/aaLogo.png" alt="AA Logo" id="logoImg">
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
@@ -45,9 +45,10 @@
         <!-- Search input form -->
         <form>
             <div class="input-group">
-                <input type="text" class="form-control text-center" size="50" placeholder="Vail, Colorado" required>
+                <input type="text" id="searchText" class="form-control text-center" size="50" placeholder="Vail, Colorado"
+                    required>
                 <div class="input-group-btn">
-                    <button type="button" class="btn btn-danger" id="btn">Search Now</button>
+                    <button type="button" class="btn btn-danger" id="searchBtn">Search Now</button>
                 </div>
             </div>
         </form>
@@ -58,13 +59,14 @@
         <div class="row">
             <!-- Weather API -->
             <div class="col-sm-6" id="weatherDiv">
-                <h3> Weather </h3>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                <h3 id="weatherTitle"> Weather </h3>
+                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive1" style="width:100%" alt="Image">
+                <div id="weatherInfo"></div>
             </div>
             <!-- GoogleMaps API -->
             <div class="col-sm-6" id="trafficDiv">
                 <h3> Traffic </h3>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%;" alt="Image">
             </div>
         </div>
     </div><br>
@@ -81,6 +83,7 @@
         <footer class="container-fluid text-center">
             <p> Autumn | Rayna | <strong>&copy; 2019 Group 2</strong> | Robert | Thomas</p>
         </footer>
+        <script type="text/javascript" src="assets/javascript/logic.js"></script>
 
 </body>
 
