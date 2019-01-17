@@ -1,37 +1,45 @@
 /* Apply flex, set min-height and columns */
 body {
-     display: flex;
-     min-height: 100vh;
-     flex-direction: column;
- }
- main {
-     flex: 1 0 auto;
- }
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 /* Keep text on single row */
- .nav-extended {
-     white-space: nowrap;
- }
+.nav-extended {
+    white-space: nowrap;
+}
+
 /* Font and style */
- .brand-logo {
-     font-family: 'Bowlby One SC',
-         cursive;
- }
+.brand-logo {
+    font-family: 'Bowlby One SC',
+        cursive;
+}
 
- /* Search Input Group */
- .input-group {
-     width: 50%;
-     margin: auto;
-     display: block;
- }
+/* Search Input Group */
+.input-group {
+    width: 50%;
+    margin: auto;
+    display: block;
+}
 
- /* Button style */
- #searchBtn {
-     border-radius: 5px;
-     margin-top: 5px;
-     background-color: #af0606;
- }
+/* Button style */
+#searchBtn {
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #af0606;
+}
+
 /* Center weather info, set margins to auto */
- #weatherInfo {
-     justify-content: center;
-     margin: auto;
- }
+table {
+    border-radius: 5px;
+    justify-content: center;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px;
+}
