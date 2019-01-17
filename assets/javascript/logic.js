@@ -16,9 +16,9 @@ $(document).ready(function () {
         if (validate == null) {
             // AJAX call to get weather information based on search query
             $.ajax({
-                type: "GET",
                 url: "http://api.openweathermap.org/data/2.5/weather?q=" + $("#searchText").val().trim() + "&appid=" + apiKey + "&units=imperial",
-                dataType: "json",
+                type: "GET",
+                dataType: "JSONP",
                 success: function (result, status, xhr) {
                     // Create a table with table rows holding table data related to weather
                     var table = $("<table><thead><tr>Weather Description</tr></thead>").attr("class", "z-depth-2 responsive-table centered");
@@ -26,7 +26,7 @@ $(document).ready(function () {
                     table.append("<tr><td>Country:</td><td>" + result.sys.country + "</td></tr>");
                     table.append("<tr><td>Current Temperature:</td><td>" + result.main.temp + "°F</td></tr>");
                     table.append("<tr><td>Humidity:</td><td>" + result.main.humidity + "</td></tr>");
-                    table.append("<tr><td>Weather:</td><td>" + result.weather.description + "</td></tr>");
+                    table.append("<tr><td>Weather:</td><td>" + result.weather[0].description + "</td></tr>");
                     table.append("<tr><td>Wind Speed:</td><td>" + result.wind.speed + "</td></tr></tbody></table>");
                     $("#weatherInfo").html(table);
                 },
