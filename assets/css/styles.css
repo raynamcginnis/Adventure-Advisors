@@ -1,54 +1,37 @@
-   #logoImg {
-       max-width: 100%;
-       justify-content: center;
-       width: 100% !important;
-       height: auto !important;
-   }
+/* Apply flex, set min-height and columns */
+body {
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+ }
+ main {
+     flex: 1 0 auto;
+ }
+/* Keep text on single row */
+ .nav-extended {
+     white-space: nowrap;
+ }
+/* Font and style */
+ .brand-logo {
+     font-family: 'Bowlby One SC',
+         cursive;
+ }
 
-   /* Remove the navbar's default margin-bottom and rounded borders */
-   .navbar {
-       background-color: black;
-       margin-bottom: 0;
-       border-radius: 0;
-   }
+ /* Search Input Group */
+ .input-group {
+     width: 50%;
+     margin: auto;
+     display: block;
+ }
 
-   /* On Title Hover */
-   .titleFont:hover {
-       color: #af0606;
-   }
-
-   /* Jumbotron style */
-   .jumbotron {
-       background-color: #24585f;
-       color: #fff;
-   }
-
-   /* Search Input Group */
-   .input-group {
-       width: 50%;
-       margin: auto;
-       display: block;
-   }
-
-   /* Button style */
-   #searchBtn {
-       border-radius: 5px;
-       margin-top: 5px;
-       background-color: #af0606;
-   }
-
-   #weatherInfo {
-       justify-content: center;
-       margin: auto;
-   }
-
-   /* Glyphicon padding */
-   .glyphicon {
-       padding-top: 20px;
-   }
-
-   /* Add a gray background color and some padding to the footer */
-   footer {
-       background-color: #f2f2f2;
-       padding: 25px;
-   }
+ /* Button style */
+ #searchBtn {
+     border-radius: 5px;
+     margin-top: 5px;
+     background-color: #af0606;
+ }
+/* Center weather info, set margins to auto */
+ #weatherInfo {
+     justify-content: center;
+     margin: auto;
+ }

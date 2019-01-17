@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--Import Google Icon Font & Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Bootstrap js -->
@@ -18,28 +23,23 @@
 
 <body>
     <!-- Navigation bar -->
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- Logo image -->
-                <img src="assets/images/aaLogo.png" alt="AA Logo" id="logoImg">
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                </ul>
-            </div>
+
+    <nav class="nav-extended blue-grey" role="navigation">
+        <div class="nav-wrapper container fixed">
+            <a href="#" id="logo" class="brand-logo fixed white-text">Adventure Advisors</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#link1">Link1</a></li>
+                <li><a href="#Link2">Link2</a></li>
+                <li><a href="#Link3">Link3</a></li>
+                <li><a href="#Link4">Link4</a></li>
+            </ul>
         </div>
     </nav>
     <!-- Jumbotron -->
-    <div class="jumbotron text-center">
+    <div class="jumbotron text-center white-text black">
         <!-- Title -->
-        <h1 class="titleFont">Adventure Advisors</h1>
+        <h1 class="titleFont heading h1"><img src="assets/images/aaLogo.png" class="frontLogo" alt="Adventure Advisors"></h1>
+        <br>
         <!-- Slogan -->
         <p>Let us help you get to where you want to go</p>
         <!-- Search input form -->
@@ -48,23 +48,25 @@
                 <input type="text" id="searchText" class="form-control text-center" size="50" placeholder="Vail, Colorado"
                     required>
                 <div class="input-group-btn">
-                    <button type="submit" class="btn btn-danger" id="searchBtn">Search Now</button>
+                    <button type="submit" name="action" class="btn waves-effect waves-light waves-yellow white-text red darken-3"
+                        id="searchBtn">Search<i class="material-icons right"> send</i></button>
                 </div>
             </div>
         </form>
     </div>
     <!-- Container for queries -->
     <div class="container text-center">
-        <h2>Trip Details</h2><br>
+        <h2>Trip Details
+        </h2><br>
         <div class="row">
             <!-- Weather API -->
-            <div class="col-sm-6" id="weatherDiv">
+            <div class="col s6" id="weatherDiv">
                 <h3 id="weatherTitle"> Weather </h3>
                 <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive1" style="width:100%" alt="Image">
                 <div id="weatherInfo"></div>
             </div>
             <!-- GoogleMaps API -->
-            <div class="col-sm-6" id="trafficDiv">
+            <div class="col s6" id="trafficDiv">
                 <h3> Traffic </h3>
                 <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%;" alt="Image">
             </div>
@@ -73,18 +75,28 @@
     <!-- Trip Advisor API -->
     <div class="container text-center content-center">
         <div class="row">
-            <div class="col content-center" id="tripAdvisorDiv">
+            <div class="col s12 content-center" id="tripAdvisorDiv">
                 <h3> Trip Advisor </h3>
                 <img src="https://placehold.it/150x80?text=IMAGE" class="img" style="width:50%" alt="Image">
             </div>
         </div>
         <br>
         <!-- Footer -->
-        <footer class="container-fluid text-center">
-            <p> Autumn | Rayna | <strong>&copy; 2019 Group 2</strong> | Robert | Thomas</p>
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container grey-text text-lighten-4 center">
+                    Autumn | Rayna | <strong>&copy; 2019 Group 2</strong> | Robert | Thomas
+                </div>
+            </div>
         </footer>
-        <script type="text/javascript" src="assets/javascript/logic.js"></script>
 
+
+
+
+
+        <script type="text/javascript" src="assets/javascript/logic.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
