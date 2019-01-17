@@ -3,10 +3,18 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: black;
+    color: white;
+}
+img {
+    size: 200%;
 }
 
 main {
     flex: 1 0 auto;
+}
+.jumbotron {
+    size: 200%;
 }
 
 /* Keep text on single row */
