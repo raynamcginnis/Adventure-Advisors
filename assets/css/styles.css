@@ -41,6 +41,10 @@ main {
     margin-top: 5px;
     background-color: #af0606;
 }
+#modal1 {
+     border-radius: 5px;
+     margin-top: 5px;
+}
 #checkBox {
     padding-left: 10px;
     padding-top: 10px;
