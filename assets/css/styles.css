@@ -41,6 +41,10 @@ main {
     margin-top: 5px;
     background-color: #af0606;
 }
+#checkBox {
+    padding-left: 10px;
+    padding-top: 10px;
+}
 
 /* Center weather info, set margins to auto */
 table {
