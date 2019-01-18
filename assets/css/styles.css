@@ -1,42 +1,55 @@
-   /* Remove the navbar's default margin-bottom and rounded borders */
-   .navbar {
-       background-color: black;
-       margin-bottom: 0;
-       border-radius: 0;
-   }
+/* Apply flex, set min-height and columns */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+img {
+    size: 200%;
+}
 
-   /* On Title Hover */
-   .titleFont:hover {
-       color: #af0606;
-   }
+main {
+    flex: 1 0 auto;
+}
+.jumbotron {
+    size: 200%;
+}
 
-   /* Jumbotron style */
-   .jumbotron {
-       background-color: #24585f;
-       color: #fff;
-   }
+/* Keep text on single row */
+.nav-extended {
+    white-space: nowrap;
+}
 
-   /* Search Input Group */
-   .input-group {
-       width: 50%;
-       margin: auto;
-       display: block;
-   }
+/* Font and style */
+.brand-logo {
+    font-family: 'Bowlby One SC',
+        cursive;
+}
 
-   /* Button style */
-   #btn {
-       border-radius: 5px;
-       margin-top: 5px;
-       background-color: #af0606;
-   }
+/* Search Input Group */
+.input-group {
+    width: 50%;
+    margin: auto;
+    display: block;
+}
 
-   /* Glyphicon padding */
-   .glyphicon {
-       padding-top: 20px;
-   }
+/* Button style */
+#searchBtn {
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #af0606;
+}
 
-   /* Add a gray background color and some padding to the footer */
-   footer {
-       background-color: #f2f2f2;
-       padding: 25px;
-   }
+/* Center weather info, set margins to auto */
+table {
+    border-radius: 5px;
+    justify-content: center;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px;
+    background-color: white;
+    color: black;
+}
