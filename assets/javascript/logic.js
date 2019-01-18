@@ -16,7 +16,7 @@ $(document).ready(function () {
         if (validate == null) {
             // AJAX call to get weather information based on search query
             $.ajax({
-                url: "http://api.openweathermap.org/data/2.5/weather?q=" + $("#searchText").val().trim() + "&appid=" + apiKey + "&units=imperial",
+                url: "https://api.openweathermap.org/data/2.5/weather?q=" + $("#searchText").val().trim() + "&appid=" + apiKey + "&units=imperial",
                 type: "GET",
                 dataType: "JSONP",
                 success: function (result, status, xhr) {
