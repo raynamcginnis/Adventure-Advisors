@@ -19,17 +19,18 @@ $(document).ready(function () {
                 url: "https://api.openweathermap.org/data/2.5/weather?q=" + $("#searchText").val().trim() + "&appid=" + apiKey + "&units=imperial",
                 type: "GET",
                 dataType: "JSONP",
-                success: function (result, status, xhr) {
+                success: function (weather, status, xhr) {
                     // Create a table with table rows holding table data related to weather
                     var table = $("<table><thead><tr>Weather Description</tr></thead>").attr("class", "z-depth-2 responsive-table centered");
-                    table.append("<tbody><tr><td>City:</td><td>" + result.name + "</td></tr>");
-                    table.append("<tr><td>Country:</td><td>" + result.sys.country + "</td></tr>");
-                    table.append("<tr><td>Current Temperature:</td><td>" + result.main.temp + "°F</td></tr>");
-                    table.append("<tr><td>Humidity:</td><td>" + result.main.humidity + "</td></tr>");
-                    table.append("<tr><td>Weather:</td><td>" + result.weather[0].description + "</td></tr>");
-                    table.append("<tr><td>Wind Speed:</td><td>" + result.wind.speed + "</td></tr></tbody></table>");
+                    table.append("<tbody><tr><td>City:</td><td>" + weather.name + "</td></tr>");
+                    table.append("<tr><td>Country:</td><td>" + weather.sys.country + "</td></tr>");
+                    table.append("<tr><td>Current Temperature:</td><td>" + weather.main.temp + "°F</td></tr>");
+                    table.append("<tr><td>Humidity:</td><td>" + weather.main.humidity + "</td></tr>");
+                    table.append("<tr><td>Weather:</td><td>" + weather.weather[0].description + "</td></tr>");
+                    table.append("<tr><td>Wind Speed:</td><td>" + weather.wind.speed + "</td></tr></tbody></table>");
                     $("#weatherInfo").html(table);
                 },
+                
                 // If theres an error, log the error
                 error: function (xhr, status, error) {
                     console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);

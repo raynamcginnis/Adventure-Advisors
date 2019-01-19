@@ -22,6 +22,10 @@ main {
     white-space: nowrap;
 }
 
+#map {
+    height: 500px;
+}
+
 /* Font and style */
 .brand-logo {
     font-family: 'Bowlby One SC',
@@ -40,6 +44,10 @@ main {
     border-radius: 5px;
     margin-top: 5px;
     background-color: #af0606;
+}
+#modal1 {
+     border-radius: 5px;
+     margin-top: 5px;
 }
 #checkBox {
     padding-left: 10px;

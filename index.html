@@ -50,10 +50,23 @@
                 <div class="input-group">
                     <button type="submit" name="action" class="btn waves-effect waves-light waves-yellow white-text red darken-3"
                         id="searchBtn">Search<i class="material-icons right"> send</i></button>
-                        <label id="checkBox">
-                            <input id="favorite" type="checkbox" value="favorite"/>
-                            <span class="text-center">Favorites</span>
-                        </label>
+                    <label id="checkBox">
+                        <input id="favorite" type="checkbox" value="favorite" />
+                        <span class="text-center">Favorites</span>
+                    </label>
+                    <!-- Modal Trigger -->
+                    <a class="waves-effect waves-light btn modal-trigger red darken-3 white-text" href="#modal1">FAVORITES</a>
+
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <h4>Modal Header</h4>
+                            <p>A bunch of text</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn">Agree</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>
@@ -72,7 +85,7 @@
             <!-- GoogleMaps API -->
             <div class="col s6" id="trafficDiv">
                 <h3> Traffic </h3>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%;" alt="Image">
+                <div id = "map"></div>
 
             </div>
         </div>
@@ -85,23 +98,31 @@
                 <img src="https://placehold.it/150x80?text=IMAGE" class="img" style="width:50%" alt="Image">
             </div>
         </div>
-        <br>
-        <!-- Footer -->
-        <footer class="page-footer blue-grey">
-            <div class="footer-copyright">
-                <div class="container grey-text text-lighten-4 center">
-                    Autumn | Rayna | <strong>&copy; 2019 Group 2</strong> | Robert | Thomas
-                </div>
+    </div>
+    <br>
+    <!-- Footer -->
+    <footer class="page-footer blue-grey">
+        <div class="footer-copyright">
+            <div class="container grey-text text-lighten-4 center">
+                Autumn | Rayna | <strong>&copy; 2019 Group 2</strong> | Robert | Thomas
             </div>
-        </footer>
+        </div>
+    </footer>
 
 
 
 
-        <script type="text/javascript" src="assets/javascript/maps.js"></script>
-        <script type="text/javascript" src="assets/javascript/logic.js"></script>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+       
+
+    <script type="text/javascript" src="assets/javascript/logic.js"></script>
+    <script type="text/javascript" src="assets/javascript/maps.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxYUZ8mLPcIPvvsGUbm0n3AtJYH99lwpc&callback=initMap">
+    </script>
+
 </body>
 
 </html>
