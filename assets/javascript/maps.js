@@ -1,85 +1,54 @@
-$("#searchBtn").click(function (event){
+$("#searchBtn").click(function (event) {
+    var map, 
+    infoWindow;
 
-var map, infoWindow;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 6
-  });
-  infoWindow = new google.maps.InfoWindow;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: -34.397,
+                lng: 150.644
+            },
+            zoom: 6
+        });
+        infoWindow = new google.maps.InfoWindow();
 
-//   // Try HTML5 geolocation.
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(function(position) {
-//       var pos = {
-//         lat: position.coords.latitude,
-//         lng: position.coords.longitude
-//       };
 
-//       infoWindow.setPosition(pos);
-//       infoWindow.setContent('Location found.');
-//       infoWindow.open(map);
-//       map.setCenter(pos);
-//     }, function() {
-//       handleLocationError(true, infoWindow, map.getCenter());
-//     });
-//   } else {
-//     // Browser doesn't support Geolocation
-//     handleLocationError(false, infoWindow, map.getCenter());
-//   }
-// }
 
-// function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-//   infoWindow.setPosition(pos);
-//   infoWindow.setContent(browserHasGeolocation ?
-//                         'Error: The Geolocation service failed.' :
-//                         'Error: Your browser doesn\'t support geolocation.');
-//   infoWindow.open(map);
-// }
+        if (navigator.geolocation) { //Checks if browser supports geolocation
+            navigator.geolocation.getCurrentPosition(function (position) { //This gets the
+                var latitude = position.coords.latitude; //users current
+                var longitude = position.coords.longitude; //location
+                var coords = new google.maps.LatLng(latitude, longitude); //Creates variable for map coordinates
+                var directionsService = new google.maps.DirectionsService();
+                var directionsDisplay = new google.maps.DirectionsRenderer();
+                var mapOptions = //Sets map options
+                    {
+                        zoom: 15, //Sets zoom level (0-21)
+                        center: coords, //zoom in on users location
+                        mapTypeControl: true, //allows you to select map type eg. map or satellite
+                        navigationControlOptions: {
+                            style: google.maps.NavigationControlStyle.SMALL //sets map controls size eg. zoom
+                        },
+                        mapTypeId: google.maps.MapTypeId.ROADMAP //sets type of map Options:ROADMAP, SATELLITE, HYBRID, TERRIAN
+                    };
 
-if (navigator.geolocation) { //Checks if browser supports geolocation
-    navigator.geolocation.getCurrentPosition(function (position) {                                                              //This gets the
-      var latitude = position.coords.latitude;                    //users current
-      var longitude = position.coords.longitude;                 //location
-      var coords = new google.maps.LatLng(latitude, longitude); //Creates variable for map coordinates
-      var directionsService = new google.maps.DirectionsService();
-      var directionsDisplay = new google.maps.DirectionsRenderer();
-      var mapOptions = //Sets map options
-      {
-        zoom: 15,  //Sets zoom level (0-21)
-        center: coords, //zoom in on users location
-        mapTypeControl: true, //allows you to select map type eg. map or satellite
-        navigationControlOptions:
-        {
-          style: google.maps.NavigationControlStyle.SMALL //sets map controls size eg. zoom
-        },
-        mapTypeId: google.maps.MapTypeId.ROADMAP //sets type of map Options:ROADMAP, SATELLITE, HYBRID, TERRIAN
-      };
-      map = new google.maps.Map( /*creates Map variable*/ document.getElementById("map"), mapOptions /*Creates a new map using the passed optional parameters in the mapOptions parameter.*/);
-      directionsDisplay.setMap(map);
-      directionsDisplay.setPanel(document.getElementById('panel'));
-      var request = {
-        origin: coords,
-        destination: $("#searchText").val().trim(),
-        travelMode: google.maps.DirectionsTravelMode.DRIVING
-      };
- 
-      directionsService.route(request, function (response, status) {
-        if (status == google.maps.DirectionsStatus.OK) {
-          directionsDisplay.setDirections(response);
+
+                map = new google.maps.Map( /*creates Map variable*/ document.getElementById("map"), mapOptions /*Creates a new map using the passed optional parameters in the mapOptions parameter.*/ );
+                directionsDisplay.setMap(map);
+                directionsDisplay.setPanel(document.getElementById('panel'));
+                var request = {
+                    origin: coords,
+                    destination: $("#searchText").val().trim(),
+                    travelMode: google.maps.DirectionsTravelMode.DRIVING
+                };
+
+                directionsService.route(request, function (response, status) {
+                    if (status == google.maps.DirectionsStatus.OK) {
+                        directionsDisplay.setDirections(response);
+                    }
+                });
+            });
         }
-      });
-    });
-  }
-}
-initMap();
+    }
+    initMap();
 });
-
-
-
-
-
-
-// $(document).ready(function (){
-// initialize();
-// });

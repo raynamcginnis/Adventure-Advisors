@@ -7,7 +7,8 @@ body {
     color: white;
 }
 img {
-    size: 200%;
+    height: auto;
+    max-width: 100%;
 }
 
 main {
@@ -18,8 +19,9 @@ main {
 }
 
 /* Keep text on single row */
-.nav-extended {
+.nav {
     white-space: nowrap;
+    overflow: hidden;
 }
 
 #map {
@@ -44,10 +46,12 @@ main {
     border-radius: 5px;
     margin-top: 5px;
     background-color: #af0606;
+    width: 100px;
 }
 #modal1 {
      border-radius: 5px;
      margin-top: 5px;
+     width: 100px;
 }
 #checkBox {
     padding-left: 10px;
@@ -60,6 +64,7 @@ main {
 }
 .row {
     display: flex;
+    overflow: hidden;
     /* equal height of the children */
 }
 
@@ -84,3 +89,33 @@ table {
     min-height: 250px;
     max-height: 307px;
 }
+
+ .controls {
+     background-color: #fff;
+     border-radius: 2px;
+     border: 1px solid transparent;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+     box-sizing: border-box;
+     font-family: Roboto;
+     font-size: 15px;
+     font-weight: 300;
+     height: 29px;
+     margin-left: 17px;
+     margin-top: 10px;
+     outline: none;
+     padding: 0 11px 0 13px;
+     text-overflow: ellipsis;
+     width: 400px;
+ }
+
+ .controls:focus {
+     border-color: #4d90fe;
+ }
+
+ #infowindow-content {
+     display: none;
+ }
+
+ #map #infowindow-content {
+     display: inline;
+ }
