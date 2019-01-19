@@ -6,6 +6,7 @@ body {
     background-color: black;
     color: white;
 }
+
 img {
     size: 200%;
 }
@@ -13,6 +14,7 @@ img {
 main {
     flex: 1 0 auto;
 }
+
 .jumbotron {
     size: 200%;
 }
@@ -41,6 +43,7 @@ main {
     margin-top: 5px;
     background-color: #af0606;
 }
+
 #checkBox {
     padding-left: 10px;
     padding-top: 10px;
@@ -56,4 +59,8 @@ table {
     padding: 5px;
     background-color: white;
     color: black;
+}
+
+#map {
+    height: 100%;
 }

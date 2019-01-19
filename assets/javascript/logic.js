@@ -4,6 +4,18 @@
 $(document).ready(function () {
     // Search Btn Click
     $("#searchBtn").click(function (event) {
+        var map;
+        window.initMap = initMap;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: -34.397,
+                    lng: 150.644
+                },
+                zoom: 6
+            });
+        }
+        initMap();
 
         // Prevent page reload
         event.preventDefault();
@@ -36,23 +48,28 @@ $(document).ready(function () {
                 }
             });
         }
-    });
-    // When AJAX is called, make sure img and title show
-    $(document).ajaxStart(function () {
-        $(".img-responsive1").show();
-        $("#weatherTitle").show();
-    });
-    // When AJAX stops, hide the img and title
-    $(document).ajaxStop(function () {
-        $(".img-responsive1").hide();
-        $("#weatherTitle").hide();
-    });
-    // Validate function to ensure text exists, if not, display error message
-    function Validate() {
-        var errorMessage = "";
-        if ($("#searchText").val() == null) {
-            errorMessage += "Enter a Destination";
+
+        // When AJAX is called, make sure img and title show
+        $(document).ajaxStart(function () {
+            $(".img-responsive1").show();
+            $("#weatherTitle").show();
+            $(".img-responsive").show();
+            $("#trafficTitle").show();
+        });
+        // When AJAX stops, hide the img and title
+        $(document).ajaxStop(function () {
+            $(".img-responsive1").hide();
+            $("#weatherTitle").hide();
+            $(".img-responsive").hide();
+            $("#trafficTitle").hide();
+        });
+        // Validate function to ensure text exists, if not, display error message
+        function Validate() {
+            var errorMessage = "";
+            if ($("#searchText").val() == null) {
+                errorMessage += "Enter a Destination";
+            }
+            console.log(errorMessage);
         }
-        console.log(errorMessage);
-    }
+    });
 });

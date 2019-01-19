@@ -71,9 +71,9 @@
             </div>
             <!-- GoogleMaps API -->
             <div class="col s6" id="trafficDiv">
-                <h3> Traffic </h3>
+                <h3 id="trafficTitle"> Traffic </h3>
                 <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%;" alt="Image">
-
+                <div id="map"></div>
             </div>
         </div>
     </div><br>
@@ -100,7 +100,9 @@
 
 
         <script type="text/javascript" src="assets/javascript/logic.js"></script>
-        <script type="text/javascript" src="assets/javascript/maps.js"></script>
+        <!-- <script type="text/javascript" src="assets/javascript/maps.js"></script> -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxYUZ8mLPcIPvvsGUbm0n3AtJYH99lwpc&libraries=places&callback=initMap"
+            async defer></script>
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
