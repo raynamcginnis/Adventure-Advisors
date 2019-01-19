@@ -1,5 +1,4 @@
 // Weather API Key 8623bd08ad8f34423c6d55147d29a7a2
-
 // On ready
 $(document).ready(function () {
     // Search Btn Click
@@ -62,4 +61,3 @@ $(document).ready(function () {
 });
 
 //if checked, grab search input
-

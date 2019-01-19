@@ -5,6 +5,24 @@ body {
     flex-direction: column;
     background-color: black;
     color: white;
+    font-family: 'NTR', sans-serif;
+}
+
+#logo {
+    font-family: 'Racing Sans One', cursive;
+}
+
+.card {
+    margin-top: 50px;
+}
+
+.card-content {
+    background-color: black;
+    color: white;
+}
+
+h5 {
+    padding-top: 15px;
 }
 
 main {
@@ -27,7 +45,13 @@ main {
 .input-group {
     width: 50%;
     margin: auto;
-    display: block;
+    background-color: none;
+    box-shadow: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    border-radius: 5px;
 }
 
 /* Button style */
@@ -67,7 +91,6 @@ main {
     /* additionally, equal width */
     max-height: 400px;
     padding: 1em;
-    border: solid;
 
 }
 
@@ -121,4 +144,9 @@ main {
 
 #map #infowindow-content {
     display: inline;
+}
+
+.footer {
+    padding: 10px;
+    opacity: .8;
 }
