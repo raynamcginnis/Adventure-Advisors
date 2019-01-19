@@ -60,3 +60,6 @@ $(document).ready(function () {
         console.log(errorMessage);
     }
 });
+
+//if checked, grab search input
+
