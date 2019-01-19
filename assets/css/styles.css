@@ -21,9 +21,13 @@ main {
 .nav-extended {
     white-space: nowrap;
 }
+#weatherInfo {
+    height: 250px;
+    margin-top: 15px;
+}
 
 #map {
-    height: 500px;
+    height: 250px;
 }
 
 /* Font and style */
@@ -52,6 +56,16 @@ main {
 #checkBox {
     padding-left: 10px;
     padding-top: 10px;
+}
+#topRow {
+    height: 400px;
+    margin-bottom: 0;
+}
+#bottomRow {
+    height: 400px;
+    margin-top: 0px;
+    overflow: hidden;
+    justify-content: center;
 }
 
 /* Center weather info, set margins to auto */

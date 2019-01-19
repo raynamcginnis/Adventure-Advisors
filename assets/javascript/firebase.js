@@ -16,7 +16,7 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-var favoriteLocation = ""
+var favoriteLocation = "";
 
 
 if ($('input[name="favorite"]').is(':checked')) {

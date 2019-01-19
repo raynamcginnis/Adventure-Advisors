@@ -1,4 +1,5 @@
 // Weather API Key 8623bd08ad8f34423c6d55147d29a7a2
+// Google API Key AIzaSyBxYUZ8mLPcIPvvsGUbm0n3AtJYH99lwpc
 
 // On ready
 $(document).ready(function () {
@@ -41,7 +42,7 @@ $(document).ready(function () {
     // When AJAX is called, make sure img and title show
     $(document).ajaxStart(function () {
         $(".img-responsive1").show();
-        $("#weatherTitle").show();
+        $("#trafficDiv").show();
     });
     // When AJAX stops, hide the img and title
     $(document).ajaxStop(function () {
