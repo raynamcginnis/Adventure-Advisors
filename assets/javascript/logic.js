@@ -21,7 +21,7 @@ $(document).ready(function () {
                 dataType: "JSONP",
                 success: function (weather, status, xhr) {
                     // Create a table with table rows holding table data related to weather
-                    var table = $("<table><thead><tr>Weather Description</tr></thead>").attr("class", "z-depth-2 responsive-table centered");
+                    var table = $("<table><thead><tr></tr></thead>").attr("class", "z-depth-2 responsive-table centered");
                     table.append("<tbody><tr><td>City:</td><td>" + weather.name + "</td></tr>");
                     table.append("<tr><td>Country:</td><td>" + weather.sys.country + "</td></tr>");
                     table.append("<tr><td>Current Temperature:</td><td>" + weather.main.temp + "°F</td></tr>");
@@ -30,7 +30,7 @@ $(document).ready(function () {
                     table.append("<tr><td>Wind Speed:</td><td>" + weather.wind.speed + "</td></tr></tbody></table>");
                     $("#weatherInfo").html(table);
                 },
-                
+
                 // If theres an error, log the error
                 error: function (xhr, status, error) {
                     console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
@@ -41,12 +41,13 @@ $(document).ready(function () {
     // When AJAX is called, make sure img and title show
     $(document).ajaxStart(function () {
         $(".img-responsive1").show();
+        $(".img-responsive").show();
         $("#weatherTitle").show();
     });
     // When AJAX stops, hide the img and title
     $(document).ajaxStop(function () {
         $(".img-responsive1").hide();
-        $("#weatherTitle").hide();
+        $(".img-responsive").hide();
     });
     // Validate function to ensure text exists, if not, display error message
     function Validate() {
