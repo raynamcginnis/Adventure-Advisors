@@ -53,7 +53,24 @@ main {
     padding-left: 10px;
     padding-top: 10px;
 }
+#map {
+    min-height: 250px;
+    max-height: 307px;
+    border-radius: 5px;
+}
+.row {
+    display: flex;
+    /* equal height of the children */
+}
 
+.col {
+    flex: 1;
+    /* additionally, equal width */
+    max-height: 400px;
+    padding: 1em;
+    border: solid;
+    
+}
 /* Center weather info, set margins to auto */
 table {
     border-radius: 5px;
@@ -64,4 +81,6 @@ table {
     padding: 5px;
     background-color: white;
     color: black;
+    min-height: 250px;
+    max-height: 307px;
 }
