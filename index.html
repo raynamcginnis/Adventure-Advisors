@@ -25,9 +25,9 @@
 <body>
     <!-- Navigation bar -->
 
-    <nav class="nav-extended blue-grey" role="navigation">
+    <nav class="nav blue-grey" role="navigation">
         <div class="nav-wrapper container fixed">
-            <a href="#" id="logo" class="brand-logo fixed white-text">Adventure Advisors</a>
+            <a href="#" id="logo" class="brand-logo white-text">Adventure Advisors</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#link1">Link1</a></li>
                 <li><a href="#Link2">Link2</a></li>
@@ -36,45 +36,68 @@
             </ul>
         </div>
     </nav>
-    <!-- Jumbotron -->
-    <div class="jumbotron text-center white-text black">
+    <!-- Image Logo Title -->
+    <div class="row s12">
         <!-- Title -->
-        <h1 class="titleFont heading h1"><img src="assets/images/aaLogo.png" class="frontLogo" alt="Adventure Advisors"></h1>
-        <br>
-        <!-- Slogan -->
-        <p>Let us help you get to where you want to go</p>
-        <!-- Search input form -->
-        <form>
-            <div class="input-group">
-                <input type="text" id="searchText" class="form-control text-center" size="50" placeholder="Vail, Colorado"
-                    required>
-                <div class="input-group">
-                    <button type="submit" name="action" class="btn waves-effect waves-light waves-yellow white-text red darken-3"
-                        id="searchBtn">Search<i class="material-icons right"> send</i></button>
-                    <label id="checkBox">
-                        <input id="favorite" type="checkbox" value="favorite" />
-                        <span class="text-center">Favorites</span>
-                    </label>
-                </div>
-            </div>
-        </form>
+        <h1 class="titleFont heading h1">
+            <img src="assets/images/aaLogo.png" class="col s12" alt="Adventure Advisors">
+        </h1>
     </div>
+    <br>
+    <div class="row">
+        <div class="col s12">
+            <!-- Slogan -->
+            <h5 class="text-center">Let us help you get to where you want to go</h5>
+        </div>
+
+    </div>
+    <div class="row">
+        <!-- Search input form -->
+        <div class="col s12 text-center content-center">
+            <form>
+                <div class="input-group">
+                    <input type="text" id="searchText" class="form-control text-center" size="50" placeholder="Vail, Colorado"
+                        required>
+                    <div class="input-group">
+                        <button type="submit" name="action" class="btn waves-effect waves-light waves-yellow white-text red darken-3"
+                            id="searchBtn">Search<i class="material-icons right"> send</i></button>
+                        <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light btn modal-trigger red darken-3 white-text center" id="modal1"
+                            href="#modal1">FAVORITES</a>
+
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal">
+                            <div class="modal-content">
+                                <h4>Modal Header</h4>
+                                <p>A bunch of text</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class="modal-close waves-effect waves-green btn">Agree</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
     <!-- Container for queries -->
     <div class="container text-center">
         <h2>Trip Details
         </h2><br>
-        <div class="row">
+        <div class="row" id="weatherTraffic">
             <!-- Weather API -->
-            <div class="col s6" id="weatherDiv">
+            <div class="col s6 m2 l6" id="weatherDiv">
                 <h3 id="weatherTitle"> Weather </h3>
                 <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive1" style="width:100%" alt="Image">
                 <div id="weatherInfo"></div>
             </div>
             <!-- GoogleMaps API -->
-            <div class="col s6" id="trafficDiv">
+            <div class="col s6 m2 l6" id="trafficDiv">
                 <h3> Traffic </h3>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%;" alt="Image">
-
+                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                <div id="map"></div>
             </div>
         </div>
     </div><br>
@@ -83,29 +106,37 @@
         <div class="row">
             <div class="col s12 content-center" id="tripAdvisorDiv">
                 <h3> Trip Advisor </h3>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img" style="width:50%" alt="Image">
-            </div>
-        </div>
-        <br>
-        <!-- Footer -->
-        <footer class="page-footer blue-grey">
-            <div class="footer-copyright">
-                <div class="container grey-text text-lighten-4 center">
-                    Autumn | Rayna | <strong>&copy; 2019 Group 2</strong> | Robert | Thomas
+                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive2" style="width:50%" alt="Image">
+                <!-- Activity Advisor -->
+                <div id="travelInfo"></div>
+                <div id="infowindow-content">
+                    <span id="place-name" class="title"></span><br>
+                    Place ID <span id="place-id"></span><br>
+                    <span id="place-address"></span>
                 </div>
             </div>
-        </footer>
+        </div>
+    </div>
+    <br>
+    <!-- Footer -->
+    <footer class="page-footer blue-grey">
+        <div class="footer-copyright">
+            <div class="container grey-text text-lighten-4 center">
+                Autumn | Rayna | <strong>&copy; 2019 Group 2</strong> | Robert | Thomas
+            </div>
+        </div>
+    </footer>
 
 
+    <script type="text/javascript" src="assets/javascript/logic.js"></script>
+    <!-- <script type="text/javascript" src="assets/javascript/travelsearch.js"></script> -->
+    <script type="text/javascript" src="assets/javascript/maps.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxYUZ8mLPcIPvvsGUbm0n3AtJYH99lwpc">
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
 
-
-
-        <script type="text/javascript" src="assets/javascript/logic.js"></script>
-        <script type="text/javascript" src="assets/javascript/maps.js"></script>
-        <script type="text/javascript" src="assets/javascript/firebase.js"></script>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
-    </body>
+    </script>
+</body>
 
 </html>
