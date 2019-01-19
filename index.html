@@ -24,9 +24,9 @@
 <body>
     <!-- Navigation bar -->
 
-    <nav class="nav blue-grey text-center" role="navigation">
+    <nav class="nav blue-grey" role="navigation">
         <div class="nav-wrapper container fixed">
-            <a href="#" id="logo" class="brand-logo fixed white-text responsive">Adventure Advisors</a>
+            <a href="#" id="logo" class="brand-logo white-text">Adventure Advisors</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#link1">Link1</a></li>
                 <li><a href="#Link2">Link2</a></li>
@@ -61,8 +61,8 @@
                         <button type="submit" name="action" class="btn waves-effect waves-light waves-yellow white-text red darken-3"
                             id="searchBtn">Search<i class="material-icons right"> send</i></button>
                         <!-- Modal Trigger -->
-                        <a class="waves-effect waves-light btn modal-trigger red darken-3 white-text center"
-                            id="modal1" href="#modal1">FAVORITES</a>
+                        <a class="waves-effect waves-light btn modal-trigger red darken-3 white-text center" id="modal1"
+                            href="#modal1">FAVORITES</a>
 
                         <!-- Modal Structure -->
                         <div id="modal1" class="modal">
@@ -105,7 +105,14 @@
         <div class="row">
             <div class="col s12 content-center" id="tripAdvisorDiv">
                 <h3> Trip Advisor </h3>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img" style="width:50%" alt="Image">
+                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive2" style="width:50%" alt="Image">
+                <!-- Activity Advisor -->
+                <div id="travelInfo"></div>
+                <div id="infowindow-content">
+                    <span id="place-name" class="title"></span><br>
+                    Place ID <span id="place-id"></span><br>
+                    <span id="place-address"></span>
+                </div>
             </div>
         </div>
     </div>
@@ -121,10 +128,11 @@
 
 
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
+    <!-- <script type="text/javascript" src="assets/javascript/travelsearch.js"></script> -->
     <script type="text/javascript" src="assets/javascript/maps.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxYUZ8mLPcIPvvsGUbm0n3AtJYH99lwpc&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxYUZ8mLPcIPvvsGUbm0n3AtJYH99lwpc">
     </script>
 
 </body>

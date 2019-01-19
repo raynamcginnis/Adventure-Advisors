@@ -40,12 +40,14 @@ $(document).ready(function () {
     });
     // When AJAX is called, make sure img and title show
     $(document).ajaxStart(function () {
+        $(".img-responsive2").show();
         $(".img-responsive1").show();
         $(".img-responsive").show();
         $("#weatherTitle").show();
     });
     // When AJAX stops, hide the img and title
     $(document).ajaxStop(function () {
+        $(".img-responsive2").hide();
         $(".img-responsive1").hide();
         $(".img-responsive").hide();
     });
