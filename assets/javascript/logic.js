@@ -30,6 +30,7 @@ $(document).ready(function () {
                     table.append("<tr><td>Wind Speed:</td><td>" + weather.wind.speed + "</td></tr></tbody></table>");
                     $("#weatherInfo").html(table);
                 },
+                
                 // If theres an error, log the error
                 error: function (xhr, status, error) {
                     console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
