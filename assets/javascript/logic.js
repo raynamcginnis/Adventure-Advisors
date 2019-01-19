@@ -21,10 +21,10 @@ $(document).ready(function () {
                 dataType: "JSONP",
                 success: function (weather, status, xhr) {
                     // Create a table with table rows holding table data related to weather
-                    var table = $("<table><thead><tr></tr></thead>").attr("class", "z-depth-2 responsive-table centered");
+                    var table = $("<table><thead><tr></tr></thead>").attr("class", "z-depth-2 bordered striped centered highlight table");
                     table.append("<tbody><tr><td>City:</td><td>" + weather.name + "</td></tr>");
                     table.append("<tr><td>Country:</td><td>" + weather.sys.country + "</td></tr>");
-                    table.append("<tr><td>Current Temperature:</td><td>" + weather.main.temp + "°F</td></tr>");
+                    table.append("<tr><td>Current Temp:</td><td>" + weather.main.temp + "°F</td></tr>");
                     table.append("<tr><td>Humidity:</td><td>" + weather.main.humidity + "</td></tr>");
                     table.append("<tr><td>Weather:</td><td>" + weather.weather[0].description + "</td></tr>");
                     table.append("<tr><td>Wind Speed:</td><td>" + weather.wind.speed + "</td></tr></tbody></table>");
