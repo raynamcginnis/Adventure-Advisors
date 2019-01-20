@@ -8,7 +8,7 @@
     <!-- Bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!--Import Google Icon Font & Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=NTR|Racing+Sans+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -28,43 +28,45 @@
     <nav class="nav blue-grey" role="navigation">
         <div class="nav-wrapper container fixed">
             <a href="#" id="logo" class="brand-logo white-text">Adventure Advisors</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#link1">Link1</a></li>
                 <li><a href="#Link2">Link2</a></li>
                 <li><a href="#Link3">Link3</a></li>
                 <li><a href="#Link4">Link4</a></li>
-            </ul>
+            </ul> -->
         </div>
     </nav>
     <!-- Image Logo Title -->
-    <div class="row s12">
-        <!-- Title -->
-        <h1 class="titleFont heading h1">
-            <img src="assets/images/aaLogo.png" class="col s12" alt="Adventure Advisors">
-        </h1>
-    </div>
-    <br>
     <div class="row">
-        <div class="col s12">
-            <!-- Slogan -->
-            <h5 class="text-center">Let us help you get to where you want to go</h5>
+        <div class="col s12 m7" id="imgLogoDiv">
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/aaLogo.png" class="col s12" id="frontLogoImg" alt="Adventure Advisors">
+                </div>
+            </div>
         </div>
 
+    </div>
+    </div>
+    <div class="row">
+        <div class="col s12 text-center">
+            <h5>Where would you like to go?</h5>
+        </div>
     </div>
     <div class="row">
         <!-- Search input form -->
         <div class="col s12 text-center content-center">
             <form>
-                <div class="input-group">
-                    <input type="text" id="searchText" class="form-control text-center" size="50" placeholder="Vail, Colorado"
-                        required>
-                    <div class="input-group">
+                <div class="input-group input-field">
+                    <input type="text" id="searchText" class="form-control text-center white-text" size="50"
+                        placeholder="Vail, Colorado" required>
+                    <div class="input-group input-field">
                         <button type="submit" name="action" class="btn waves-effect waves-light waves-yellow white-text red darken-3"
                             id="searchBtn">Search<i class="material-icons right"> send</i></button>
                         <!-- Modal Trigger -->
-                        <a class="waves-effect waves-light btn modal-trigger red darken-3 white-text center" id="modal1"
-                            href="#modal1">FAVORITES</a>
-
+                        <a class="waves-effect waves-light btn modal-trigger red darken-3 white-text" id="modal1" href="#modal1">
+                            <div class="text-center">FAVORITES</div>
+                        </a>
                         <!-- Modal Structure -->
                         <div id="modal1" class="modal">
                             <div class="modal-content">
@@ -72,13 +74,15 @@
                                 <p>A bunch of text</p>
                             </div>
                             <div class="modal-footer">
-                                <a href="#!" class="modal-close waves-effect waves-green btn">Agree</a>
+                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
+    </div>
+
 
     </div>
 
@@ -88,15 +92,19 @@
         </h2><br>
         <div class="row" id="weatherTraffic">
             <!-- Weather API -->
-            <div class="col s6 m2 l6" id="weatherDiv">
+            <div class="col s12" id="weatherDiv">
                 <h3 id="weatherTitle"> Weather </h3>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive1" style="width:100%" alt="Image">
+                <img src="https://images.unsplash.com/photo-1530675392811-1966d9218af1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                    id="infoSections" class="img-responsive1" style="width:100%" alt="Image">
                 <div id="weatherInfo"></div>
             </div>
+        </div>
+        <div class="row">
             <!-- GoogleMaps API -->
-            <div class="col s6 m2 l6" id="trafficDiv">
+            <div class="col s12" id="trafficDiv">
                 <h3> Traffic </h3>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                <img src="https://images.unsplash.com/photo-1531579234-a0a99da45460?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+                    id="infoSections" class="img-responsive" style="width:100%" alt="Image">
                 <div id="map"></div>
             </div>
         </div>
@@ -106,7 +114,8 @@
         <div class="row">
             <div class="col s12 content-center" id="tripAdvisorDiv">
                 <h3> Trip Advisor </h3>
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive2" style="width:50%" alt="Image">
+<img src="https://images.unsplash.com/photo-1488628278511-2177a435414d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
+                    id="infoSections" class="img-responsive2" style="width:100%" alt="Image">
                 <!-- Activity Advisor -->
                 <div id="travelInfo"></div>
                 <div id="infowindow-content">
@@ -119,13 +128,11 @@
     </div>
     <br>
     <!-- Footer -->
-    <footer class="page-footer blue-grey">
-        <div class="footer-copyright">
-            <div class="container grey-text text-lighten-4 center">
-                Autumn | Rayna | <strong>&copy; 2019 Group 2</strong> | Robert | Thomas
-            </div>
+    <div class="footer footer-copyright blue-grey">
+        <div class="container grey-text text-lighten-4 center">
+            Autumn | Rayna | <strong>&copy; 2019 Group 2</strong> | Robert | Thomas
         </div>
-    </footer>
+    </div>
 
 
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
@@ -134,7 +141,8 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxYUZ8mLPcIPvvsGUbm0n3AtJYH99lwpc">
-    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+        < script src = "https://www.gstatic.com/firebasejs/5.7.3/firebase.js" >
+    </script>
 
     </script>
 </body>
