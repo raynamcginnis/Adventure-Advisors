@@ -109,13 +109,35 @@
                 <h3> Trip Advisor </h3>
                 <img src="https://images.unsplash.com/photo-1488628278511-2177a435414d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
                     id="infoSections" class="img-responsive2" style="width:100%" alt="Image">
+                <!-- search input box -->
+                <form>
+                    <div class="form-group input-group">
+                        <input type="text" id="search_location" class="form-control" placeholder="Search location">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default get_map" type="submit">
+                                Locate
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- display google map -->
+                <div id="geomap"></div>
+
+                <!-- display selected location information -->
+                <h4>Location Details</h4>
+                <p>Address: <input type="text" class="search_addr" size="45"></p>
+                <p>Latitude: <input type="text" class="search_latitude" size="30"></p>
+                <p>Longitude: <input type="text" class="search_longitude" size="30"></p>
+
+
                 <!-- Activity Advisor -->
-                <div id="travelInfo"></div>
-                <div id="infowindow-content">
+                <!-- <div id="travelInfo"></div> -->
+                <!-- <div id="infowindow-content">
                     <span id="place-name" class="title"></span><br>
                     Place ID <span id="place-id"></span><br>
                     <span id="place-address"></span>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -142,7 +164,7 @@
     <!-- Weather JS File -->
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
     <!-- Travel Search JS -->
-    <!-- <script type="text/javascript" src="assets/javascript/travelsearch.js"></script> -->
+    <script type="text/javascript" src="assets/javascript/travelsearch.js"></script>
     <!-- Maps JS -->
     <script type="text/javascript" src="assets/javascript/maps.js"></script>
 </body>

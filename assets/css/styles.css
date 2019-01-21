@@ -181,3 +181,8 @@ input:-webkit-autofill {
     padding: 10px;
     opacity: .8;
 }
+/* Activity map */
+#geomap {
+    width: 100%;
+    height: 400px;
+}
