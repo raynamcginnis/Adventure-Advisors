@@ -40,8 +40,9 @@ body {
 }
 
 /* Question padding */
-h5 {
+h2, h3, h4 {
     padding-top: 15px;
+    font-family: 'Racing Sans One', cursive;
 }
 
 /* Flex main */
@@ -60,7 +61,9 @@ main {
     font-family: 'Bowlby One SC',
         cursive;
 }
-
+input {
+    border-radius: 15px;
+}
 /* Search Input Group */
 .input-group {
     width: 50%;
@@ -72,24 +75,17 @@ main {
 /* Input Box Shadow BG */
 input:-webkit-autofill {
     box-shadow: 0 0 0 1000px white inset !important;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
-/* Button style */
-#searchBtn {
+/* Buttons style */
+#searchBtn, #modal1 {
     border-radius: 5px;
     margin-top: 5px;
-    background-color: #af0606;
+    padding: 0px;
+    font-size: 1.1em;
     width: 100px;
-}
-
-/* Modal size */
-#modal1 {
-    border-radius: 5px;
-    margin-top: 5px;
-    width: 100px;
-    font-size: 14px;
-
+    font-family: 'NTR', sans-serif;
 }
 
 /* Map Styles */
@@ -181,12 +177,9 @@ input:-webkit-autofill {
     padding: 10px;
     opacity: .8;
 }
-/* 
-
-
-*/
 
 /* Activity map */
 #geomap {
     width: 100%;
     height: 400px;
+}
