@@ -5,6 +5,8 @@
     <title>Adventure Advisors</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- reset css-->
+    <link rel="stylesheet" href="assets/css/reset.css">
     <!-- Bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!--Import Google Icon Font & Fonts-->
@@ -58,28 +60,25 @@
                         placeholder="Vail, Colorado" required>
                     <div class="input-group input-field">
                         <button type="submit" name="action" class="btn waves-effect waves-light waves-yellow white-text red darken-3"
-                            id="searchBtn">Search<i class="material-icons right" style="padding-right: 5px; margin-left: -10px;">send</i></button>
-                        <!-- Modal Trigger -->
-                        <a class="waves-effect waves-light btn modal-trigger red darken-3 white-text center-align" id="modal1"
-                            href="#modal1">
-                            <div class="center-align">FAVORITES</div>
-                        </a>
-                        <!-- Modal Structure -->
-                        <div id="modal1" class="modal">
-                            <div class="modal-content">
-                                <h4>Modal Header</h4>
-                                <p>A bunch of text</p>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                            </div>
-                        </div>
+
+                            id="searchBtn">Search<i class="material-icons right"> send</i></button>
+                        <button type="submit" name="action" class="btn waves-effect waves-light waves-yellow white-text red darken-3"
+                            id="favBtn">Favorite<i class="material-icons right"> send</i></button>
+
+
                     </div>
+                    <table class="table table-sm table-hover" id="favorite">
+                        <thead>
+                            <tr>
+                                <th scope="col">Favorite Places</th>
+                            </tr>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
             </form>
         </div>
     </div>
-
     <!-- Container for queries -->
     <div class="container text-center">
         <h2>Trip Details
@@ -156,6 +155,8 @@
     </div>
 
 
+
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Bootstrap js -->
@@ -167,12 +168,14 @@
     </script>
     <!-- FireBase -->
     <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
-    <!-- Weather JS File -->
+        <script type="text/javascript" src="assets/javascript/firebase.js"></script>
+<!-- Weather JS File -->
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
     <!-- Travel Search JS -->
     <script type="text/javascript" src="assets/javascript/travelsearch.js"></script>
     <!-- Maps JS -->
     <script type="text/javascript" src="assets/javascript/maps.js"></script>
+
 </body>
 
 </html>

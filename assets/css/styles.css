@@ -78,8 +78,8 @@ input:-webkit-autofill {
     border-radius: 15px;
 }
 
-/* Buttons style */
-#searchBtn, #modal1 {
+/* Button style */
+#searchBtn, #favBtn {
     border-radius: 5px;
     margin-top: 5px;
     padding: 0px;
@@ -88,8 +88,12 @@ input:-webkit-autofill {
     font-family: 'NTR', sans-serif;
 }
 
-/* Map Styles */
-#map {
+#checkBox {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#map, #travelInfo {
     min-height: 250px;
     max-height: 307px;
     border-radius: 5px;
