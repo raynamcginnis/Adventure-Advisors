@@ -1,16 +1,4 @@
 // Weather API Key 8623bd08ad8f34423c6d55147d29a7a2
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyBNxXvHwFMZknaZ4GNpH7AJl4QZmS15-WM",
-    authDomain: "adventureadvisors-e98a1.firebaseapp.com",
-    databaseURL: "https://adventureadvisors-e98a1.firebaseio.com",
-    projectId: "adventureadvisors-e98a1",
-    storageBucket: "adventureadvisors-e98a1.appspot.com",
-    messagingSenderId: "568711330769"
-};
-firebase.initializeApp(config);
-// Firebase Database
-var database = firebase.database();
 // On ready
 $(document).ready(function () {
     // Search Btn Click
@@ -18,7 +6,6 @@ $(document).ready(function () {
 
         // Prevent page reload
         event.preventDefault();
-
         //Run Validate function
         var validate = Validate();
         // Weather API Key
@@ -26,27 +13,7 @@ $(document).ready(function () {
         // Make sure there is text in the search input
         $("#searchText").html(validate);
         event.preventDefault();
-        // Favorites  = SearchText Input
-        var favorite = $("#searchText").val();
-        // establish FireBase Favorites
-        var favPlace = {
-            favorite: favorite
-        };
 
-
-        // Establish database reference, push favorite places to database
-        database.ref().push(favPlace);
-        // Add snapshot, assign to variable, throw variable into table
-        database.ref().on("child_added", function (childSnapshot) {
-
-            var newFavPlace = childSnapshot.val().favorite;
-            //   console.log(newFavPlace);
-
-            var newRow = $("<tr>").append(
-                $("<td>").text(newFavPlace.toUpperCase())
-            );
-            $("#favorite").append(newRow);
-        });
         if (validate == null) {
             // AJAX call to grab weather information based on search query
             $.ajax({
@@ -65,11 +32,14 @@ $(document).ready(function () {
                     $("#weatherInfo").html(table);
                 },
 
+
                 // If theres an error, log the error
                 error: function (xhr, status, error) {
                     console.log("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText);
                 }
+
             });
+
         }
     });
     // When AJAX is called, make sure img and title show
