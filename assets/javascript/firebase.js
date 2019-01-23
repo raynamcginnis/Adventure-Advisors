@@ -18,11 +18,12 @@ $("#searchBtn").on("click", function (event) {
     // establish FireBase Favorites
     var favPlace = {
         favorite: favorite
+        
     };
 
 
     // Establish database reference, push favorite places to database
-    database.ref().push(favPlace);
+    database.ref().push();
     //   console.log(favPlace);
 });
 // Add snapshot value to new favorite places to append into new row
