@@ -13,10 +13,10 @@ $(document).ready(function () {
         // Make sure there is text in the search input
         $("#searchText").html(validate);
         if (validate == null) {
-            // AJAX call to get weather information based on search query
+            // AJAX call to grab weather information based on search query
             $.ajax({
                 url: "https://api.openweathermap.org/data/2.5/weather?q=" + $("#searchText").val().trim() + "&appid=" + apiKey + "&units=imperial",
-                type: "GET",
+                type: "POST",
                 dataType: "JSONP",
                 success: function (weather, status, xhr) {
                     // Create a table with table rows holding table data related to weather
