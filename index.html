@@ -12,10 +12,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- CSS style -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -45,14 +41,14 @@
                 </div>
             </div>
         </div>
-
     </div>
-    </div>
+    <!-- Question Div -->
     <div class="row">
         <div class="col s12 text-center">
-            <h5>Where would you like to go?</h5>
+            <h4>Where would you like to go?</h4>
         </div>
     </div>
+    <!-- Search Row -->
     <div class="row">
         <!-- Search input form -->
         <div class="col s12 text-center content-center">
@@ -62,10 +58,11 @@
                         placeholder="Vail, Colorado" required>
                     <div class="input-group input-field">
                         <button type="submit" name="action" class="btn waves-effect waves-light waves-yellow white-text red darken-3"
-                            id="searchBtn">Search<i class="material-icons right"> send</i></button>
+                            id="searchBtn">Search<i class="material-icons right" style="padding-right: 5px; margin-left: -10px;">send</i></button>
                         <!-- Modal Trigger -->
-                        <a class="waves-effect waves-light btn modal-trigger red darken-3 white-text" id="modal1" href="#modal1">
-                            <div class="text-center">FAVORITES</div>
+                        <a class="waves-effect waves-light btn modal-trigger red darken-3 white-text center-align" id="modal1"
+                            href="#modal1">
+                            <div class="center-align">FAVORITES</div>
                         </a>
                         <!-- Modal Structure -->
                         <div id="modal1" class="modal">
@@ -81,9 +78,6 @@
                 </div>
             </form>
         </div>
-    </div>
-
-
     </div>
 
     <!-- Container for queries -->
@@ -114,15 +108,42 @@
         <div class="row">
             <div class="col s12 content-center" id="tripAdvisorDiv">
                 <h3> Trip Advisor </h3>
-<img src="https://images.unsplash.com/photo-1488628278511-2177a435414d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
+                <img src="https://images.unsplash.com/photo-1488628278511-2177a435414d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
                     id="infoSections" class="img-responsive2" style="width:100%" alt="Image">
+                <!-- search input box -->
+                <form>
+                    <div class="form-group input-group">
+                        <input type="text" id="searchText" class="form-control" placeholder="Search location">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default get_map" type="submit">
+                                Locate
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- display google map -->
+                <div id="geomap"></div>
+                <div id="right-panel">
+                    <h2>Results</h2>
+                    <ul id="places"></ul>
+                    <button id="more">More results</button>
+                </div>
+
+                <!-- display selected location information -->
+                <h4>Location Details</h4>
+                <p>Address: <input type="text" class="search_addr" size="45"></p>
+                <p>Latitude: <input type="text" class="search_latitude" size="30"></p>
+                <p>Longitude: <input type="text" class="search_longitude" size="30"></p>
+
+
                 <!-- Activity Advisor -->
-                <div id="travelInfo"></div>
-                <div id="infowindow-content">
+                <!-- <div id="travelInfo"></div> -->
+                <!-- <div id="infowindow-content">
                     <span id="place-name" class="title"></span><br>
                     Place ID <span id="place-id"></span><br>
                     <span id="place-address"></span>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -135,16 +156,23 @@
     </div>
 
 
-    <script type="text/javascript" src="assets/javascript/logic.js"></script>
-    <!-- <script type="text/javascript" src="assets/javascript/travelsearch.js"></script> -->
-    <script type="text/javascript" src="assets/javascript/maps.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxYUZ8mLPcIPvvsGUbm0n3AtJYH99lwpc">
-        < script src = "https://www.gstatic.com/firebasejs/5.7.3/firebase.js" >
+    <!-- Google maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxYUZ8mLPcIPvvsGUbm0n3AtJYH99lwpc&libraries=places">
     </script>
-
-    </script>
+    <!-- FireBase -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+    <!-- Weather JS File -->
+    <script type="text/javascript" src="assets/javascript/logic.js"></script>
+    <!-- Travel Search JS -->
+    <script type="text/javascript" src="assets/javascript/travelsearch.js"></script>
+    <!-- Maps JS -->
+    <script type="text/javascript" src="assets/javascript/maps.js"></script>
 </body>
 
 </html>
