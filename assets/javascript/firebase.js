@@ -10,16 +10,16 @@ var config = {
 firebase.initializeApp(config);
 // Firebase Database
 var database = firebase.database();
-
 // On Favorite button click
-$("#favBtn").on("click", function (event) {
+$("#searchBtn").on("click", function (event) {
     event.preventDefault();
     // Favorites  = SearchText Input
-    var favorite = $("#searchText").val().trim();
+    var favorite = $("#searchText").val();
     // establish FireBase Favorites
     var favPlace = {
         favorite: favorite
     };
+
 
     // Establish database reference, push favorite places to database
     database.ref().push(favPlace);
