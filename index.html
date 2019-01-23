@@ -60,21 +60,19 @@
                         placeholder="Vail, Colorado" required>
                     <div class="input-group input-field">
                         <button type="submit" name="action" class="btn waves-effect waves-light waves-yellow white-text red darken-3"
-
                             id="searchBtn">Search<i class="material-icons right"> send</i></button>
                         <button type="submit" name="action" class="btn waves-effect waves-light waves-yellow white-text red darken-3"
-                            id="favBtn">Favorite<i class="material-icons right"> send</i></button>
-
-
+                            id="favBtn">Favorite</button>
                     </div>
                     <table class="table table-sm table-hover" id="favorite">
                         <thead>
                             <tr>
-                                <th scope="col">Favorite Places</th>
+                                <th class="text-center" scope="col">Click 'Favorite' to add to this table!</th>
                             </tr>
                         <tbody>
                         </tbody>
                     </table>
+                    <div id="favoritesSection"></div>
                 </div>
             </form>
         </div>
@@ -110,39 +108,8 @@
                 <img src="https://images.unsplash.com/photo-1488628278511-2177a435414d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
                     id="infoSections" class="img-responsive2" style="width:100%" alt="Image">
                 <!-- search input box -->
-                <form>
-                    <div class="form-group input-group">
-                        <input type="text" id="searchText" class="form-control" placeholder="Search location">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default get_map" type="submit">
-                                Locate
-                            </button>
-                        </div>
-                    </div>
-                </form>
-
-                <!-- display google map -->
-                <div id="geomap"></div>
-                <div id="right-panel">
-                    <h2>Results</h2>
-                    <ul id="places"></ul>
-                    <button id="more">More results</button>
-                </div>
-
-                <!-- display selected location information -->
-                <h4>Location Details</h4>
-                <p>Address: <input type="text" class="search_addr" size="45"></p>
-                <p>Latitude: <input type="text" class="search_latitude" size="30"></p>
-                <p>Longitude: <input type="text" class="search_longitude" size="30"></p>
-
-
-                <!-- Activity Advisor -->
-                <!-- <div id="travelInfo"></div> -->
-                <!-- <div id="infowindow-content">
-                    <span id="place-name" class="title"></span><br>
-                    Place ID <span id="place-id"></span><br>
-                    <span id="place-address"></span>
-                </div> -->
+                <iframe src="https://www.google.com/maps/d/embed?mid=1W_apbu8B5wfGVnZFXukxkV_aQYvu3z6A" width="640"
+                    height="480"></iframe>
             </div>
         </div>
     </div>
@@ -168,8 +135,8 @@
     </script>
     <!-- FireBase -->
     <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
-        <script type="text/javascript" src="assets/javascript/firebase.js"></script>
-<!-- Weather JS File -->
+    <script type="text/javascript" src="assets/javascript/firebase.js"></script>
+    <!-- Weather JS File -->
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
     <!-- Travel Search JS -->
     <script type="text/javascript" src="assets/javascript/travelsearch.js"></script>
