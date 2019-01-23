@@ -40,7 +40,7 @@ $("#searchBtn").click(function (event) {
                 directionsDisplay.setPanel(document.getElementById('panel'));
                 var request = {
                     origin: coords,
-                    destination: $("#searchText").val().trim(),
+                    destination: $("#searchText").val(),
                     travelMode: google.maps.DirectionsTravelMode.DRIVING
                 };
 
