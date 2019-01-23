@@ -88,9 +88,8 @@ input:-webkit-autofill {
     font-family: 'NTR', sans-serif;
 }
 
-#checkBox {
-    padding-left: 10px;
-    padding-top: 10px;
+#favorite {
+    margin-top: 15px;
 }
 
 #map, #travelInfo {
