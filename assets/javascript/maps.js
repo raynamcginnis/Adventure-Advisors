@@ -21,6 +21,7 @@ $("#searchBtn").click(function (event) {
                 var coords = new google.maps.LatLng(latitude, longitude); //Creates variable for map coordinates
                 var directionsService = new google.maps.DirectionsService();
                 var directionsDisplay = new google.maps.DirectionsRenderer();
+                var trafficLayer = new google.maps.TrafficLayer();
                 var mapOptions = //Sets map options
                     {
                         zoom: 15, //Sets zoom level (0-21)
@@ -35,6 +36,7 @@ $("#searchBtn").click(function (event) {
 
                 map = new google.maps.Map( /*creates Map variable*/ document.getElementById("map"), mapOptions /*Creates a new map using the passed optional parameters in the mapOptions parameter.*/ );
                 directionsDisplay.setMap(map);
+                trafficLayer.setMap(map);
                 directionsDisplay.setPanel(document.getElementById('panel'));
                 var request = {
                     origin: coords,
