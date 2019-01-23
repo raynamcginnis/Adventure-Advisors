@@ -29,7 +29,17 @@ $("#searchBtn").on("click", function (event) {
 database.ref().on("child_added", function (childSnapshot) {
 
     var newFavPlace = childSnapshot.val().favorite;
-    //   console.log(newFavPlace);
+    var addUserDestinations = favorite;
+    var favDestinations = {};
+    for (var i = 0, len = addUserDestinations.length; i < len; i++) {
+
+    var key = addUserDestinations[i].getAttribute('data-key');
+    var value = addDestinations[i].value;
+        favDestinations[key] = value;
+    }
+    database.ref().push(favDestinations, function () {
+        console.log("data has been inserted");
+    });
 
     var newRow = $("<tr>").append(
         $("<td>").text(newFavPlace.toUpperCase())
