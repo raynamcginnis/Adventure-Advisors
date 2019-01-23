@@ -1,13 +1,5 @@
 // $("#searchBtn").click(function (event) {
-  function initMap() {
-    var map = new google.maps.Map(document.getElementById('geomap'), {
-      zoom: 13,
-      center: {lat: 34.04924594193164, lng: -118.24104309082031}
-    });
-  
-    var trafficLayer = new google.maps.TrafficLayer();
-    trafficLayer.setMap(map);
-  }
+
   // function initMap() {
   //   // Styles a map in night mode.
   //   var map = new google.maps.Map(document.getElementById('geomap'), {
