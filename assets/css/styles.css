@@ -59,6 +59,10 @@ main {
     overflow: hidden;
 }
 
+.nav a {
+    width: 100%;
+}
+
 /* Font and style */
 .brand-logo {
     font-family: 'Bowlby One SC',

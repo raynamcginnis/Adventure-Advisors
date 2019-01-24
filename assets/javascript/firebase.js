@@ -29,8 +29,6 @@ $("#searchBtn").on("click", function (event) {
 // Add snapshot value to new favorite places to append into new row
 database.ref().on("child_added", function (childSnapshot) {
 
-    var favDestinations = database.ref().child('favorite');
-
     var newFavPlace = childSnapshot.val().favorite;
     var addUserDestinations = favorite;
     var newFavDestinations = {};
