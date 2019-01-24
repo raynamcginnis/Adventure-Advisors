@@ -211,7 +211,6 @@ input:-webkit-autofill {
 @media only screen and (max-width: 992px) {
     nav .brand-logo {
         left: 50%;
-        position: fixed;
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
     }
