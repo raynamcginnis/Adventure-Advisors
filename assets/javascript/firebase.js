@@ -18,7 +18,7 @@ $("#searchBtn").on("click", function (event) {
     // establish FireBase Favorites
     var favPlace = {
         favorite: favorite
-        
+
     };
 
 
@@ -47,5 +47,5 @@ database.ref().on("child_added", function (childSnapshot) {
     var newRow = $("<tr>").append(
         $("<td>").text(newFavPlace.toUpperCase())
     );
-    $("#favorite").prepend(newRow);
+    $("#favorite").append(newRow);
 });
