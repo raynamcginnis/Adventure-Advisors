@@ -113,6 +113,17 @@ input:-webkit-autofill {
     justify-content: center;
 }
 
+/* Image Resize */
+.resize {
+    width: 200px;
+    height: auto;
+}
+
+.resize {
+    width: auto;
+    height: 300px;
+}
+
 /* Row Flex */
 .row {
     display: flex;
