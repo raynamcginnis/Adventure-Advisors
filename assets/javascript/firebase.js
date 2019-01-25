@@ -21,29 +21,14 @@ $("#searchBtn").on("click", function (event) {
 
     };
 
-
     // Establish database reference, push favorite places to database
-    database.ref().push();
+    database.ref().push(favPlace);
     //   console.log(favPlace);
 });
 // Add snapshot value to new favorite places to append into new row
 database.ref().on("child_added", function (childSnapshot) {
-
     var newFavPlace = childSnapshot.val().favorite;
-    var addUserDestinations = favorite;
-    var newFavDestinations = {};
-
-    for (var i = 0, len = addUserDestinations.length; i < len; i++) {
-
-        var key = addUserDestinations[i].getAttribute('data-key');
-        var value = addUserDestinations[i].value;
-        newFavDestinations[key] = value;
-    }
-    database.ref().push(newFavDestinations, function () {
-        console.log("Data has been inserted:");
-        console.log(newFavDestinations);
-    });
-
+    //   console.log(newFavPlace);
     var newRow = $("<tr>").append(
         $("<td>").text(newFavPlace.toUpperCase())
     );
