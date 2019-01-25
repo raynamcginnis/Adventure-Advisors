@@ -18,11 +18,12 @@ $("#searchBtn").on("click", function (event) {
     // establish FireBase Favorites
     var favPlace = {
         favorite: favorite
+
     };
 
 
     // Establish database reference, push favorite places to database
-    database.ref().push(favPlace);
+    database.ref().push();
     //   console.log(favPlace);
 });
 // Add snapshot value to new favorite places to append into new row
@@ -30,19 +31,21 @@ database.ref().on("child_added", function (childSnapshot) {
 
     var newFavPlace = childSnapshot.val().favorite;
     var addUserDestinations = favorite;
-    var favDestinations = {};
+    var newFavDestinations = {};
+
     for (var i = 0, len = addUserDestinations.length; i < len; i++) {
 
-    var key = addUserDestinations[i].getAttribute('data-key');
-    var value = addDestinations[i].value;
-        favDestinations[key] = value;
+        var key = addUserDestinations[i].getAttribute('data-key');
+        var value = addUserDestinations[i].value;
+        newFavDestinations[key] = value;
     }
-    database.ref().push(favDestinations, function () {
-        console.log("data has been inserted");
+    database.ref().push(newFavDestinations, function () {
+        console.log("Data has been inserted:");
+        console.log(newFavDestinations);
     });
 
     var newRow = $("<tr>").append(
         $("<td>").text(newFavPlace.toUpperCase())
     );
-    $("#favorite").prepend(newRow);
+    $("#favorite").append(newRow);
 });

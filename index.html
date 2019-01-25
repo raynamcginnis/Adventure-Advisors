@@ -23,15 +23,9 @@
 <body>
     <!-- Navigation bar -->
 
-    <nav class="nav blue-grey" role="navigation">
-        <div class="nav-wrapper container fixed">
-            <a href="#" id="logo" class="brand-logo white-text">Adventure Advisors</a>
-            <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#link1">Link1</a></li>
-                <li><a href="#Link2">Link2</a></li>
-                <li><a href="#Link3">Link3</a></li>
-                <li><a href="#Link4">Link4</a></li>
-            </ul> -->
+    <nav class="nav blue-grey content-center text-center" role="navigation">
+        <div class="nav-wrapper container center fixed">
+            <a href="#" id="logo" class="brand-logo white-text center">Adventure Advisors</a>
         </div>
     </nav>
     <!-- Image Logo Title -->
@@ -56,15 +50,15 @@
         <div class="col s12 text-center content-center">
             <form>
                 <div class="input-group input-field">
-                    <input type="text" id="searchText" class="form-control text-center white-text" size="50"
-                        placeholder="Vail, Colorado" required>
+                    <input type="text" id="searchText" data-key="destination" class="form-control text-center white-text"
+                        size="50" placeholder="Vail, Colorado" required>
                     <div class="input-group input-field">
                         <button type="submit" name="action" class="btn waves-effect waves-light waves-yellow white-text red darken-3"
                             id="searchBtn">Search<i class="material-icons right"> send</i></button>
                         <!-- <button type="submit" name="action" class="btn waves-effect waves-light waves-yellow white-text red darken-3"
                             id="favBtn">Favorite</button> -->
                     </div>
-                    <table class="table table-sm table-hover responsive-table" id="favorite">
+                    <table class="table table-sm table-hover" id="favorite">
                         <thead>
                             <tr class="z-depth-2 bordered striped centered highlight table">
                                 <th class="text-center" scope="col">Search a Destination to add to this table!</th>
@@ -86,7 +80,7 @@
             <div class="col s12" id="weatherDiv">
                 <h3 id="weatherTitle"> Weather </h3>
                 <img src="https://images.unsplash.com/photo-1530675392811-1966d9218af1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-                    id="infoSections" class="img-responsive1" style="width:100%" alt="Image">
+                    id="infoSections" class="img-responsive1 resize" style="width:100%" alt="Image">
                 <div id="weatherInfo"></div>
             </div>
         </div>
@@ -95,7 +89,7 @@
             <div class="col s12" id="trafficDiv">
                 <h3> Traffic </h3>
                 <img src="https://images.unsplash.com/photo-1531579234-a0a99da45460?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
-                    id="infoSections" class="img-responsive" style="width:100%" alt="Image">
+                    id="infoSections" class="img-responsive resize" style="width:100%" alt="Image">
                 <div id="map"></div>
             </div>
         </div>
@@ -106,7 +100,7 @@
             <div class="col s12 content-center" id="tripAdvisorDiv">
                 <h3> Trip Advisor </h3>
                 <img src="https://images.unsplash.com/photo-1488628278511-2177a435414d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
-                    id="infoSections" class="img-responsive2" style="width:100%" alt="Image">
+                    id="infoSections" class="img-responsive2 resize" style="width:100%" alt="Image">
                 <!-- search input box -->
                 <iframe src="https://www.google.com/maps/d/embed?mid=1W_apbu8B5wfGVnZFXukxkV_aQYvu3z6A" width="640"
                     height="480"></iframe>
