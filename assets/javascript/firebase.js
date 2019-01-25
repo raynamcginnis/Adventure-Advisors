@@ -14,7 +14,7 @@ var database = firebase.database();
 $("#searchBtn").on("click", function (event) {
     event.preventDefault();
     // Favorites  = SearchText Input
-    var favorite = $("#searchText").val();
+    var favorite = $("#searchText").val().trim();
     // establish FireBase Favorites
     var favPlace = {
         favorite: favorite
@@ -32,5 +32,5 @@ database.ref().on("child_added", function (childSnapshot) {
     var newRow = $("<tr>").append(
         $("<td>").text(newFavPlace.toUpperCase())
     );
-    $("#favorite").append(newRow);
+    $("#favorite").prepend(newRow);
 });
