@@ -35,4 +35,24 @@ database.ref().on("child_added", function (childSnapshot) {
         $("<td>").text(newFavPlace.toUpperCase())
     );
     $("#favorite").prepend(newRow);
+
+    //delete icon
+    let deleteIconUI = document.createElement("span");
+    deleteIconUI.class = "delete-location";
+    deleteIconUI.innerHTML = "☓";
+    deleteIconUI.setAttribute("newFavPlace", key);
+    deleteIconUI.addEventListener("click", deleteButtonClicked)
+    
+    $li.append(deleteIconUI)
+
+    //delete when clicked
+
+    function deleteButtonClicked(event) {
+        event.stopPropagation();
+        const newFavPlace = e.target.getAttribute("newFavPlace");
+        const userRef = dbRef.child('users/' + userID);
+        newFavPlace.remove()
+      }
+
+      userRef.remove();
 });
