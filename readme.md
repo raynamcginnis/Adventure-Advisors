@@ -1,7 +1,23 @@
-## Adventure Advisors
+# Adventure Advisors
 
-- Find out live information regarding trips you wish to take!
-- Pulling from Weather and Google Map APIs
-- Generate live weather and traffic feeds based on query searches.
-- Live Site: {https://raynamcginnis.github.io/group-project-1/}
-Created by Autumn, Rayna, Robert, and Thomas
+## General Info
+This application is designed to help you plan out a last minute roadtrip, providing current weather and traffic based on a users specific location inquery. 
+
+## Technologies Used
+- CSS
+- HTML
+- Bootstrap
+- Weather API
+- Goole Maps API
+- Firebase
+
+## Contributors
+- Autumn Kelley
+- Rayna McGinnis
+- Robert Morris
+- Thomas Headle
+
+## Setup
+In order to run this locally, you can open the index.html file in your local browser
+
+To view a live demo, go to https://raynamcginnis.github.io/Adventure-Advisors/
